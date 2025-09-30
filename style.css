@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{ /* para chamar uma tag usamos o próprio nome da tag*/
+    background-color: #1e252d;
+    color: #F6F6F6;
+    height: 100vh; /* serve para ocupar tuda a tela */
+    box-sizing: border-box; /* faz com que o padding e a borda sejam incluídos na largura e altura totais do elemento */
+}
+
+.destaqueTitulo{ /* Para chamar classes usamos o .nome-classe ou a a tag: tag.nomedaclasse ou então mais de uma classe: tag.nomeclasse.outraclasse*/
+  color: #cc9e3e;
+}
+
+/*para chamr id deve usar o #valor_id {propriedades} ou também pela tag#valor_id
+  span#identificador {propriedades}
+*/
+
+*{ /* o "*" significa todos os elementos da página*/
+    margin: 0;
+    padding: 0;
+}
+
+.apresentacao{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12% 13%;
+}
+
+.apresentacao__imagem img{
+  width: 475px;
+  height: 475px;
+}
+
+.apresentacao__conteudo{
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.apresentacao__conteudo__titulo{
+  font-size: 36px;
+  font-family: krona one, sans-serif;
+}
+
+.apresentacao__conteudo__parag{
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__conteudo__links{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+} 
+
+.apresentacao__conteudo__botão{
+  background-color: #cc9e3e;
+  width: 280px;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 24px;
+  padding: 21.5px 0;
+  text-decoration: none;  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #1e252d;
+  transition: 0.2s;
+}
+
+.apresentacao__conteudo__botão:hover{
+  background-color: gold;
+  color: #1e252d;
+  transition: 0.2s;
+  font-weight: 700;
+  transform: scale(1.07);
+}
+
