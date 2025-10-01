@@ -5,8 +5,23 @@
 body{ /* para chamar uma tag usamos o próprio nome da tag*/
     background-color: #1e252d;
     color: #F6F6F6;
-    height: 100vh; /* serve para ocupar tuda a tela */
+    /*height: 100vh;  serve para ocupar tuda a tela */
     box-sizing: border-box; /* faz com que o padding e a borda sejam incluídos na largura e altura totais do elemento */
+}
+
+.cabecalho{
+  padding: 2% 0 0 10%;
+}
+
+.cabecalho__menu{
+  display: flex;
+  gap: 80px;
+}
+.cabecalho__menu__link{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+
 }
 
 .destaqueTitulo{ /* Para chamar classes usamos o .nome-classe ou a a tag: tag.nomedaclasse ou então mais de uma classe: tag.nomeclasse.outraclasse*/
@@ -26,12 +41,12 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 12% 13%;
+  padding: 7% 10%;
 }
 
 .apresentacao__imagem img{
-  width: 475px;
-  height: 475px;
+  width: 600px;
+  height: 600px;
 }
 
 .apresentacao__conteudo{
@@ -54,28 +69,48 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 .apresentacao__conteudo__links{
   display: flex;
   justify-content: space-between;
-  margin: 0 10%;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
 } 
-
+.apresentacao__conteudo__links__subtitulo{
+  font-family: 'krona one', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
 .apresentacao__conteudo__botão{
-  background-color: #cc9e3e;
-  width: 280px;
+  border: #cc9e3e 2px solid;
+  width: 378px;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 8px;
   font-size: 24px;
   padding: 21.5px 0;
   text-decoration: none;  
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #1e252d;
+  color: #f6f6f6;
   transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
 }
 
 .apresentacao__conteudo__botão:hover{
-  background-color: gold;
+  background-color: #cc9e3e;
   color: #1e252d;
   transition: 0.2s;
   font-weight: 700;
   transform: scale(1.07);
+}
+
+.rodape{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #cc9e3e;
+  padding: 24px;
+  font-size: 36px;
+  font-weight: 300;
+
 }
 
