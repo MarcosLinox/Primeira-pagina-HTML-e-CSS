@@ -2,9 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --cor-fundo: #1e252d;
+    --cor-destaque: #cc9e3e;
+    --cor-texto: #F6F6F6;
+}
+
 body{ /* para chamar uma tag usamos o próprio nome da tag*/
-    background-color: #1e252d;
-    color: #F6F6F6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     /*height: 100vh;  serve para ocupar tuda a tela */
     box-sizing: border-box; /* faz com que o padding e a borda sejam incluídos na largura e altura totais do elemento */
 }
@@ -18,14 +24,39 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   gap: 80px;
 }
 .cabecalho__menu__link{
+  position: relative;
+  display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 600;
+  text-decoration: none;
+  color: var(--cor-destaque);
+  transition: transform 0.5s;
+}
 
+.cabecalho__menu__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: var(--cor-destaque);
+  transition: transform 0.5s ease;
+}
+.cabecalho__menu__link:hover{
+  transition: 0.5s;
+  font-weight: 700;
+  transform: scale(1.07);
+}
+.cabecalho__menu__link:hover::after{
+  transform: translateX(-50%) scaleX(1);
 }
 
 .destaqueTitulo{ /* Para chamar classes usamos o .nome-classe ou a a tag: tag.nomedaclasse ou então mais de uma classe: tag.nomeclasse.outraclasse*/
-  color: #cc9e3e;
+  color: var(--cor-destaque);
 }
 
 /*para chamr id deve usar o #valor_id {propriedades} ou também pela tag#valor_id
@@ -79,7 +110,7 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   font-size: 24px;
 }
 .apresentacao__conteudo__botão{
-  border: #cc9e3e 2px solid;
+  border: var(--cor-destaque) 2px solid;
   width: 378px;
   text-align: center;
   border-radius: 8px;
@@ -88,7 +119,7 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   text-decoration: none;  
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #f6f6f6;
+  color: var(--cor-texto);
   transition: 0.2s;
   display: flex;
   justify-content: center;
@@ -97,8 +128,8 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 }
 
 .apresentacao__conteudo__botão:hover{
-  background-color: #cc9e3e;
-  color: #1e252d;
+  background-color: var(--cor-destaque);
+  color: var(--cor--fundo);
   transition: 0.2s;
   font-weight: 700;
   transform: scale(1.07);
@@ -107,7 +138,7 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 .rodape{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  background-color: #cc9e3e;
+  background-color: var(--cor-destaque);
   padding: 24px;
   font-size: 36px;
   font-weight: 300;
