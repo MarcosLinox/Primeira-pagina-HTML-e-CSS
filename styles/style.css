@@ -6,6 +6,8 @@
     --cor-fundo: #1e252d;
     --cor-destaque: #cc9e3e;
     --cor-texto: #F6F6F6;
+    --cor-qudrado: #77878B;
+    --sombra-caixa: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 body{ /* para chamar uma tag usamos o próprio nome da tag*/
@@ -145,3 +147,68 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 
 }
 
+.quadrado{
+  display: flex;
+  background-color: var(--cor-fundo);
+  box-shadow: var(--sombra-caixa);
+  width: 900px;
+  height: 288px;
+  margin: 3% auto;
+  justify-content: space-between;
+}
+
+.quadrado__titulo{
+  font-family: 'montserrat', sans-serif;
+}
+
+.quadrado__subtitulo{
+  font-family: 'montserrat', sans-serif;
+  font-weight: 300;
+  margin-top: -7px;
+}
+
+.quadrado__contatos{
+  padding: 3% 4%;;
+}
+
+.quadrado__contatos__lista{
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.contatos-lista{
+  text-decoration: none;
+  font-family: 'montserrat', sans-serif;
+  color: var(--cor-texto);
+}
+
+.contatos-lista:hover{
+  transition: 0.3s;
+  font-weight: 600;
+  transform: scale(1.01);
+}
+
+.quadrado_link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+.curriculoIcon{
+  font-size: 18px;   /* tamanho do ícone */
+  width: 20px;       /* largura mínima */
+  margin: 0;         /* tira o margin-top que desalinhava */
+}
+
+.quadrado_perfil{
+  width: 288px;
+  height: 288px;
+  border-radius: 800px 0 0 800px;
+  box-shadow: var(--sombra-caixa);
+}
