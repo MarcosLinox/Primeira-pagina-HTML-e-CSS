@@ -148,11 +148,12 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 
 @media (max-width: 1150px) {
   .cabecalho{
-    padding: 10%;
+    padding: 5%;
   }
 
   .cabecalho__menu{
     justify-content: center;
+    gap: 20px;
   }
 
   .apresentacao{
@@ -161,9 +162,12 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   }
   .apresentacao__conteudo{
     width: auto;
-    text-align: justify;
   }
 
+  .apresentacao__imagem{
+    width: 80%;
+    margin-bottom: 5%;
+  }
 }
 
 
