@@ -29,7 +29,7 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   position: relative;
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--cor-destaque);
@@ -75,27 +75,27 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   align-items: center;
   justify-content: space-between;
   padding: 7% 10%;
+  gap: 82px;
 }
 
-.apresentacao__imagem img{
-  width: 600px;
-  height: 600px;
+.apresentacao__imagem{
+  width: 36%;
 }
 
 .apresentacao__conteudo{
-  width: 800px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 .apresentacao__conteudo__titulo{
-  font-size: 36px;
+  font-size: 2.25rem;
   font-family: krona one, sans-serif;
 }
 
 .apresentacao__conteudo__parag{
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -109,14 +109,14 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 .apresentacao__conteudo__links__subtitulo{
   font-family: 'krona one', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .apresentacao__conteudo__botão{
   border: var(--cor-destaque) 2px solid;
-  width: 378px;
+  width: 50%;
   text-align: center;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 1.5rem;
   padding: 21.5px 0;
   text-decoration: none;  
   font-family: 'Montserrat', sans-serif;
@@ -142,10 +142,38 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
   text-align: center;
   background-color: var(--cor-destaque);
   padding: 24px;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 300;
+}
+
+@media (max-width: 1150px) {
+  .cabecalho{
+    padding: 10%;
+  }
+
+  .cabecalho__menu{
+    justify-content: center;
+  }
+
+  .apresentacao{
+    flex-direction: column-reverse;  
+    padding: 5% 5%;
+  }
+  .apresentacao__conteudo{
+    width: auto;
+    text-align: justify;
+  }
 
 }
+
+
+
+
+
+
+
+
+/* Curriculo */
 
 .quadrado{
   display: flex;
@@ -201,7 +229,7 @@ body{ /* para chamar uma tag usamos o próprio nome da tag*/
 }
 
 .curriculoIcon{
-  font-size: 18px;   /* tamanho do ícone */
+  font-size: 1.125rem;   /* tamanho do ícone */
   width: 20px;       /* largura mínima */
   margin: 0;         /* tira o margin-top que desalinhava */
 }
